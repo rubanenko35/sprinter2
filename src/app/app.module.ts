@@ -12,6 +12,7 @@ import { FirebaseService } from './shared/services/firebase.service';
 import { AppPreloadingStrategy } from './utils/app.preloading-strategi';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FirebaseAuthService } from './shared/services/firebase-auth.service';
+import { HeaderComponent } from 'app/components/header/header.component';
 
 const config = {
   apiKey: 'AIzaSyDVS9Dls26xt6Qa46dYP6Qaxx2GqQ5edsc',
@@ -25,6 +26,7 @@ const config = {
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ const config = {
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
   ],
   providers: [
     FirebaseAuthService,

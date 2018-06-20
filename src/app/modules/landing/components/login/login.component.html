@@ -1,0 +1,45 @@
+<div class="form__wrapper">
+  <div class="form__bg">
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="loginOnSubmit(loginForm)" novalidate>
+
+    <div class="form__header">
+      <div>
+        {{ type }}
+      </div>
+      <div class="close" (click)="hideFunc()">
+        x
+      </div>
+    </div>
+
+    <mat-form-field class="form__item">
+      <input matInput formControlName="username" placeholder="Login">
+    </mat-form-field>
+
+    <mat-form-field class="form__item">
+      <input matInput formControlName="password" placeholder="Password">
+    </mat-form-field>
+
+    <mat-form-field class="form__item">
+      <input matInput  placeholder="Password">
+    </mat-form-field>
+
+
+    <button class="form__button">Type</button>
+
+    <!--<div class="text" *ngIf="mode === 'logIn'">-->
+      <!--Don't have an account?-->
+      <!--<span>-->
+              <!--Go to-->
+              <!--<a ng-click="loginController.changeModeToSignUp()">Sign up</a>-->
+          <!--</span>-->
+    <!--</div>-->
+    <!--<div class="text" ng-show="loginController.mode === 'signUp'">-->
+      <!--Already have an account?<br>-->
+      <!--<span>-->
+              <!--Go to-->
+              <!--<a ng-click="loginController.changeModeToLogIn()">Log in</a>-->
+          <!--</span>-->
+    <!--</div>-->
+  </form>
+  </div>
+</div>

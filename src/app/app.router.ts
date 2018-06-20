@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     loadChildren: 'app/modules/landing/landing.module#LandingModule',
   },
+  // {
+  //   path: 'login',
+  //   loadChildren: 'app/modules/login/login.module#LoginModule',
+  // },
   {
     path: '**',
     redirectTo: ''
