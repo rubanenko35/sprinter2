@@ -10,6 +10,7 @@ export abstract class UnsubscribeOnDestroy implements OnDestroy {
     const f = this.ngOnDestroy;
     this.ngOnDestroy = () => {
       f();
+      this.destroy$.next();
       this.destroy$.complete();
     };
   }

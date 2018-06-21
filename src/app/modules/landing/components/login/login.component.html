@@ -3,11 +3,9 @@
   <form class="form" [formGroup]="loginForm" (ngSubmit)="loginOnSubmit(loginForm)" novalidate>
 
     <div class="form__header">
-      <div>
-        {{ type }}
-      </div>
-      <div class="close" (click)="hideFunc()">
-        x
+      <div></div>
+      <div class="close" (click)="hidePopUp()">
+        <i class="flaticon-cancel"></i>
       </div>
     </div>
 
@@ -16,15 +14,15 @@
     </mat-form-field>
 
     <mat-form-field class="form__item">
-      <input matInput formControlName="password" placeholder="Password">
+      <input matInput formControlName="password" type="password" placeholder="Password">
     </mat-form-field>
 
-    <mat-form-field class="form__item">
+    <mat-form-field class="form__item" *ngIf="popUpType === 'sing-up'">
       <input matInput  placeholder="Password">
     </mat-form-field>
 
 
-    <button class="form__button">Type</button>
+    <button class="form__button">{{ type }}</button>
 
     <!--<div class="text" *ngIf="mode === 'logIn'">-->
       <!--Don't have an account?-->

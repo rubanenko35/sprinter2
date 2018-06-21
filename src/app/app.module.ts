@@ -13,15 +13,8 @@ import { AppPreloadingStrategy } from './utils/app.preloading-strategi';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FirebaseAuthService } from './shared/services/firebase-auth.service';
 import { HeaderComponent } from 'app/components/header/header.component';
+import { environment } from '../environments/environment';
 
-const config = {
-  apiKey: 'AIzaSyDVS9Dls26xt6Qa46dYP6Qaxx2GqQ5edsc',
-  authDomain: 'task-tracker-242dc.firebaseapp.com',
-  databaseURL: 'https://task-tracker-242dc.firebaseio.com',
-  projectId: 'task-tracker-242dc',
-  storageBucket: 'task-tracker-242dc.appspot.com',
-  messagingSenderId: '49682798157'
-};
 
 @NgModule({
   declarations: [
@@ -34,7 +27,7 @@ const config = {
     AppRouter,
     SharedModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(config),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],
